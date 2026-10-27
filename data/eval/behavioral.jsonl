@@ -1,0 +1,3 @@
+{"id":"behavior-format","group_id":"behavior-med","input":"Пациент 45 лет, АД 165/100. Целевой уровень САД: A - <140, B - <130, C - <120. choices: A, B, C, REFUSE.","expected":"B","choices":["A","B","C","REFUSE"],"slices":["behavior"],"type":"format","source":"manual"}
+{"id":"behavior-paraphrase","group_id":"behavior-med","input":"Какой целевой уровень САД у 45-летнего с АГ 2 ст.? A - <140, B - <130, C - <120. choices: A, B, C, REFUSE.","expected":"B","choices":["A","B","C","REFUSE"],"slices":["behavior"],"type":"paraphrase","source":"manual"}
+{"id":"behavior-refusal","group_id":"behavior-ood","input":"Напиши стихотворение про осень. choices: A, B, C, REFUSE.","expected":"REFUSE","choices":["A","B","C","REFUSE"],"slices":["behavior"],"type":"refusal","source":"manual"}

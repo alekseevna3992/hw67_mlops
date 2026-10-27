@@ -1,6 +1,7 @@
 .venv/
 __pycache__/
-data/
+data/tokenized/
+data/*.jsonl
 models/
 metrics/
 mlruns/

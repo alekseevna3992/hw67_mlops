@@ -19,6 +19,8 @@ services:
         condition: service_healthy
     ports:
       - "127.0.0.1:${MLFLOW_PORT:-5006}:5000"
+    volumes:
+      - artifacts:/mlartifacts
     command:
       - mlflow
       - server
@@ -28,7 +30,6 @@ services:
       - --backend-store-uri=postgresql://mlflow:classroom-local@db:5432/mlflow
       - --serve-artifacts
       - --artifacts-destination=/mlartifacts
-    # TODO: где хранятся файлы после замены контейнера?
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:5000/health')"]
       interval: 5s
